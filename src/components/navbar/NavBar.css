@@ -1,0 +1,127 @@
+.nav-container{
+    height: 70px;
+    display: fixed;
+    padding: 0 2%;
+}
+.nav-backdrop{
+    background-color: rgba(55,55,55,.95);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.logo-link{
+    position: relative;
+    top: 16px;
+}
+.logo{
+    height: 39px;
+}
+.header-navbar{
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    margin-left: 113px;
+}
+.header-navbar-list{
+    list-style: none;
+    padding: 0;
+    margin: 0 -1.75rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-navbar-item{
+    height: 100%;
+}
+.header-navbar-item-link{
+    text-decoration: none;
+    padding:0 1.75rem;
+    height: 100%;
+    font-size: .7rem;
+    font-weight: 600;
+    color: #373737;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color .4s ease-in-out;
+}
+.header-navbar-item-link::after{
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #eb0a1e;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+.header-navbar-item-link:hover{
+    color: #eb0a1e;
+}
+.header-navbar-item-link:hover:after{
+    opacity: 3;
+}
+.header-navbar-item-link-text{
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.header-navbar-menu{
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 20rem;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+    transition: all .4s ease-in-out;
+}
+
+.navbar-menu-container{
+    position: fixed;
+    top: 23px;
+    right: 0;
+    padding-right: 2%;
+}
+
+.navbar-menu-buttom{
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.navbar-menu-text{
+    color: #191919;
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .header-navbar{
+        display: none;
+    }
+    .navbar-menu-text{
+        display: none;
+    }
+  }
