@@ -11,7 +11,7 @@ const NavBar = () =>{
             <nav className="header-navbar">
                 <ul className="header-navbar-list">
                     <li className="header-navbar-item">
-                        <a href="#" className="header-navbar-item-link">
+                        <a href="https://www.youtube.com" target="_blank" className="header-navbar-item-link">
                             <span className="header-navbar-item-link-text">Modelos</span>
                         </a>
                     </li>

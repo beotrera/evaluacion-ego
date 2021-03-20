@@ -1,7 +1,9 @@
 .nav-container{
     height: 70px;
-    display: fixed;
-    padding: 0 2%;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #d1d1d1;
 }
 .nav-backdrop{
     background-color: rgba(55,55,55,.95);
@@ -94,10 +96,11 @@
 }
 
 .navbar-menu-container{
+    display: inline-block;
+    width: 80px;
     position: fixed;
-    top: 23px;
     right: 0;
-    padding-right: 2%;
+    top: 23px;
 }
 
 .navbar-menu-buttom{
@@ -120,6 +123,9 @@
 @media only screen and (max-width: 600px) {
     .header-navbar{
         display: none;
+    }
+    .navbar-menu-container{
+        width: 35px;
     }
     .navbar-menu-text{
         display: none;
