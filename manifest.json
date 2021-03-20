@@ -1,21 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Ego",
+  "name": "Evaluacion-EGO",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "39x39"
     },
     {
-      "src": "logo192.png",
+      "src": "logo@2x.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "76x78"
     },
     {
-      "src": "logo512.png",
+      "src": "logo@3x.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "114x117"
     }
   ],
   "start_url": ".",
