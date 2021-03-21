@@ -3,7 +3,7 @@
     position: fixed;
     width: 100%;
     background-color: white;
-    border-bottom: 1px solid #d1d1d1;
+    border-bottom: 1px solid rgba(55,55,55,.1);
 }
 .nav-backdrop{
     background-color: rgba(55,55,55,.95);
@@ -19,6 +19,7 @@
 }
 .logo-link{
     position: relative;
+    left: 1em;
     top: 16px;
 }
 .logo{
@@ -81,15 +82,18 @@
     letter-spacing: normal;
 }
 .header-navbar-menu{
+    border: 1px solid rgba(55,55,55,.1);
+    margin-top: 70px;
     position: fixed;
     z-index: 2;
     right: 0;
     top: 0;
     bottom: 0;
+    width: 390px;
     min-width: 20rem;
     background-color: #fff;
-    visibility: hidden;
-    opacity: 0;
+    /*visibility: hidden;
+    opacity: 0;*/
     -webkit-transform: translateX(5%);
     transform: translateX(5%);
     transition: all .4s ease-in-out;
@@ -99,7 +103,7 @@
     display: inline-block;
     width: 80px;
     position: fixed;
-    right: 0;
+    right: 1em;
     top: 23px;
 }
 
