@@ -113,8 +113,105 @@
     margin-right: 4px;
 }
 
+.header-navbar-menu-hidden{
+    text-align: right;
+    border-left: 1px solid #e9e9e9;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(0);
+    transition: all .2s ease-in-out;
+}
+.open{
+    visibility:visible;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+.navbar-menu-container-list{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 70px;
+    background: #efeeef;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-/*mobile*/
+}
+.navbar-menu-logo{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 2.5rem;
+    margin-left: 2px;
+}
+.navbar-menu-button{
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.navbar-menu-button-text{
+    color: #191919;
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-right: 6px;
+}
+.navbar-menu-list{
+    position: relative;
+    list-style: none;
+    margin-bottom:3rem;
+    padding: 1rem 0;
+}
+.navbar-menu-list::before{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: -0.2rem;
+    right: -1rem;
+    background-color: white;
+}
+.navbar-menu-list-item{
+    position: relative;
+    z-index: 1;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+}
+.navbar-menu-list-item-link{
+    text-decoration: none;
+}
+.navbar-menu-list-item-link-text{
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: black;
+}
+.separador{
+    position: relative;
+    width: 94%;
+    margin-top: 2em;
+    margin-left: 3%;
+    margin-bottom: 2em;
+    border: solid 1px #e9e9e9;
+}
+.navbar-menu-list-second{
+    position: relative;
+    background: none;
+    padding: 1rem 0;
+}
+
 @media only screen and (max-width: 750px) {
     .header-navbar{
         display: none;
@@ -124,5 +221,17 @@
     }
     .navbar-menu-text{
         display: none;
+    }
+
+    .header-navbar-menu-hidden{
+        max-width: 750px;
+        min-width: 290px;
+        top: 70px;
+    }
+
+    .open{
+        max-width: 750px;
+        min-width: 290px;
+        top: 70px;
     }
   }

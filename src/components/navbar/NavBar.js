@@ -1,9 +1,13 @@
 import "./NavBar.css"
 import logo from  "../../img/logo.svg"
 import gray from  "../../img/gray.png"
-import NavBarMenu from "./NavBarMenu"
+import ItemMenu from "./ItemMenu"
+import ItemMenuSecond from "./ItemMenuSecond"
+import fill from  "../../img/fill-1.png"
+import React, { useState } from 'react';
 
 const NavBar = () =>{
+    const [isOpen,setisOpen] = useState(true)
 
     return(
         <header className="nav-container">
@@ -24,12 +28,51 @@ const NavBar = () =>{
                 </ul>
             </nav>
             <div className="navbar-menu-container">
-                <button className="navbar-menu-buttom">
+                <button className="navbar-menu-buttom" onClick={e=>setisOpen(false)}>
                     <span className="navbar-menu-text">Menú</span>
                     <img src={gray} className="logo-menu"></img>
                 </button>
             </div>
-            <NavBarMenu />
+            <nav className={isOpen ? 'header-navbar-menu-hidden':'header-navbar-menu-hidden open'}>
+                <div className="navbar-menu-logo">
+                    <button className="navbar-menu-button" onClick={(e)=>setisOpen(true)}>
+                        <span className="navbar-menu-button-text">Cerrar</span>
+                        <img src={fill} className="navbar-menu-img"></img>
+                    </button>
+                </div>
+                <div className="navbar-menu-container-list">
+                    <ul className="navbar-menu-list">
+                        {ItemMenu.map(item=>{
+                            console.log(item.title != "separador")
+                            if(item.title != "separador")
+                            {
+                                return(
+                                    <li className="navbar-menu-list-item">
+                                        <a href={item.url} className="navbar-menu-list-item-link">
+                                            <span className="navbar-menu-list-item-link-text">{item.title}</span>
+                                        </a>
+                                    </li>)
+                            }
+                            else
+                            {
+                                return(<li className="separador"></li>)
+                            }
+                        })}
+                    </ul>
+                    <ul className="navbar-menu_list-second">
+                        {ItemMenuSecond.map(item=>{
+                                    return(
+                                        <li className="navbar-menu-list-item">
+                                            <a href={item.url} className="navbar-menu-list-item-link">
+                                                <span className="navbar-menu-list-item-link-text">{item.title}</span>
+                                            </a>
+                                        </li>
+                                    )
+                                    }
+                        )}
+                    </ul>
+                </div>
+            </nav>
         </header>
     )
 }
