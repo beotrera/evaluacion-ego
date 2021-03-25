@@ -1,23 +1,6 @@
 {
   "short_name": "Ego",
   "name": "Evaluacion-EGO",
-  "icons": [
-    {
-      "src": "logo.png",
-      "type": "image/png",
-      "sizes": "39x39"
-    },
-    {
-      "src": "logo@2x.png",
-      "type": "image/png",
-      "sizes": "76x78"
-    },
-    {
-      "src": "logo@3x.png",
-      "type": "image/png",
-      "sizes": "114x117"
-    }
-  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
