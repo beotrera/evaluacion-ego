@@ -1,13 +1,27 @@
 import NavBar from "./components/navbar/NavBar"
+import ModelContainer from "./components/modelos/modelContainer";
 import Footer from "./components/footer/footer"
+import  {BrowserRouter,Switch,Route} from "react-router-dom"
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <div style={{height:1400}}></div>
-      <Footer />
-    </div>
+    <BrowserRouter>
+        <NavBar />
+        <div style={{height:70}}/>
+        <Switch>
+            <Route path="/modelos/:id?">
+              <ModelContainer />
+            </Route>
+            <Route path="/ficha">
+              <div style={{height:140}}/>
+            </Route>
+            <Route path="/">
+              <ModelContainer />
+            </Route>
+        </Switch>
+        <Footer />
+    </BrowserRouter>
   );
 }
 

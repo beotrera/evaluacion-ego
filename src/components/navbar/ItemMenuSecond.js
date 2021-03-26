@@ -1,27 +1,27 @@
 const ItemMenuSecond=[
     {
         title:"Actividades",
-        url:"#"
+        url:"/"
     },
     {
         title:"Servicios al Cliente",
-        url:"#"
+        url:"/"
     },
     {
         title:"Ventas Especiales",
-        url:"#"
+        url:"/"
     },
     {
         title:"Innovación",
-        url:"#"
+        url:"/"
     },
     {
         title:"Prensa",
-        url:"#"
+        url:"/"
     },
     {
         title:"Acerca de...",
-        url:"#"
+        url:"/"
     }
 ]
 
