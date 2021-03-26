@@ -3,7 +3,7 @@ import "./modelContainer.css"
 import  arrow from "../../img/arrow@3x.png"
 import ItemsAPI from "./modelsItems"
 import React, { useState, useEffect } from 'react';
-import {useParams,NavLink} from "react-router-dom";
+import {useParams,NavLink,Link} from "react-router-dom";
 import  SortArray from "sort-array"
 
 const ModelContainer = () =>{
@@ -58,32 +58,40 @@ const ModelContainer = () =>{
                <NavLink className="filter-button-open" to="/modelos/Pickups y Comerciales" activeClassName="select">Pickups y Comerciales</NavLink>
                <NavLink className="filter-button-open" to="/modelos/SUVs y Crossovers" activeClassName="select">SUVs y Crossovers</NavLink>
             </div>
-            <div className="filter-button-container dropdown">
+            <div className="filter-button-container dropdown" onMouseEnter={() => setOpenFilter(true)} onMouseLeave={() => setOpenFilter(false)}>
                <div>
-                  <button className="filter-button left-text" onClick={e=>setOpenFilter(!isOpenFilter)}>
+                  <button className="filter-button left-text">
                      <span className="filter-container-text">Filtrar Por</span>
                      <img className={isOpenFilter?"arrow rotate":"arrow"} src={arrow}  alt="arrow"></img>
                   </button>
                </div>
                <ul className={isOpenFilter?"filter-button-container-list isOpen":"filter-button-container-list"} >
                   <li className="filter-button-container-list-item-left line-bottom">
-                     <NavLink exact to="/modelos" activeClassName="none">Todos</NavLink>
+                     <button className="dropdownButton">
+                        <Link exact to="/modelos" activeClassName="none"  onClick={e=>setOpenFilter(!isOpenFilter)}>Todos</Link>
+                     </button>
                   </li>
                   <li className="filter-button-container-list-item-left line-bottom ">
-                     <NavLink  to="/modelos/Autos" activeClassName="none">Autos</NavLink>
+                     <button className="dropdownButton">
+                     <Link  to="/modelos/Autos" activeClassName="none"  onClick={e=>setOpenFilter(!isOpenFilter)}>Autos</Link>
+                     </button>
                   </li>
                   <li className="filter-button-container-list-item-left line-bottom">
-                     <NavLink  to="/modelos/Pickups y Comerciales" activeClassName="none">Pickups y Comerciales</NavLink>
+                     <button className="dropdownButton">
+                     <Link  to="/modelos/Pickups y Comerciales" activeClassName="none"  onClick={e=>setOpenFilter(!isOpenFilter)}>Pickups y Comerciales</Link>
+                     </button>
                   </li>
                   <li className="filter-button-container-list-item-left line-bottom">
-                     <NavLink  to="/modelos/SUVs y Crossovers" activeClassName="none">SUVs y Crossovers</NavLink>
+                     <button className="dropdownButton">
+                     <Link  to="/modelos/SUVs y Crossovers" activeClassName="none"  onClick={e=>setOpenFilter(!isOpenFilter)}>SUVs y Crossovers</Link>
+                     </button>
                   </li>
                </ul>
             </div>
             {/* ordenar por */}
-            <div className="filter-button-container">
+            <div className="filter-button-container" onMouseEnter={() => setOpenOrder(true)} onMouseLeave={() => setOpenOrder(false)}>
                <div>
-                  <button className="filter-button right-text" onClick={e=>setOpenOrder(!isOpenOrder)}>
+                  <button className="filter-button right-text">
                      <span className="filter-container-text">Ordenar Por</span>
                      <img className="arrow" src={arrow}  alt="arrow"></img>
                   </button>
