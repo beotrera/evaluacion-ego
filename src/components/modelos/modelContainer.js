@@ -60,7 +60,7 @@ const ModelContainer = () =>{
             </div>
             <div className="filter-button-container dropdown" onMouseEnter={() => setOpenFilter(true)} onMouseLeave={() => setOpenFilter(false)}>
                <div>
-                  <button className="filter-button left-text">
+                  <button className="filter-button left-text" onClick={e=>setOpenFilter(!isOpenFilter)}>
                      <span className="filter-container-text">Filtrar Por</span>
                      <img className={isOpenFilter?"arrow rotate":"arrow"} src={arrow}  alt="arrow"></img>
                   </button>
@@ -89,11 +89,11 @@ const ModelContainer = () =>{
                </ul>
             </div>
             {/* ordenar por */}
-            <div className="filter-button-container" onMouseEnter={() => setOpenOrder(true)} onMouseLeave={() => setOpenOrder(false)}>
+            <div className="filter-button-container" onMouseEnter={() => setOpenOrder(true)} onMouseLeave={() => setOpenFilter(false)}>
                <div>
-                  <button className="filter-button right-text">
+                  <button className="filter-button right-text" onClick={e=>setOpenOrder(!isOpenOrder)}>
                      <span className="filter-container-text">Ordenar Por</span>
-                     <img className="arrow" src={arrow}  alt="arrow"></img>
+                     <img className={isOpenOrder?"arrow rotate":"arrow"} src={arrow}  alt="arrow"></img>
                   </button>
                </div>
                <ul className={isOpenOrder?"filter-button-container-list isOpen":"filter-button-container-list"} >
