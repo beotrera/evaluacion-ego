@@ -58,7 +58,7 @@ const ModelContainer = () =>{
                <NavLink className="filter-button-open" to="/modelos/Pickups y Comerciales" activeClassName="select">Pickups y Comerciales</NavLink>
                <NavLink className="filter-button-open" to="/modelos/SUVs y Crossovers" activeClassName="select">SUVs y Crossovers</NavLink>
             </div>
-            <div className="filter-button-container dropdown" onMouseEnter={() => setOpenFilter(true)} onMouseLeave={() => setOpenFilter(false)}>
+            <div className="filter-button-container dropdown" onMouseEnter={() => setOpenFilter(true)}>
                <div>
                   <button className="filter-button left-text" onClick={e=>setOpenFilter(!isOpenFilter)}>
                      <span className="filter-container-text">Filtrar Por</span>
