@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from "react-router-dom";
+import Slider from "../slider/Slider"
 import ItemsAPI from "./fichaItem"
 import "./fichaContainer.css"
 
@@ -30,8 +31,9 @@ const FichaContainer=()=>{
                     <p>{Data.description}</p>
                 </div>
             </div>
-            <div className="slide-container" style={{textAlign:'center',marginTop:80,marginBottom:80}}>------------------------------------------------------slide------------------------------------------------------</div>
-
+            <div style={{marginBottom:20,marginTop:20}}>
+                <Slider item={Data}/>
+            </div>
             <div className="highlights-container">
                 {Data.model_highlights.map(item=>{
                                 if(direct)
