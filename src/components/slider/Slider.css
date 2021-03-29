@@ -62,7 +62,7 @@
     justify-content: center;
 }
 .list-paging li{
-    width: 40px !important;
+    width: 28px !important;
     text-align: center !important;
     display: flex !important;
     flex-direction: row !important;
@@ -74,6 +74,7 @@
     opacity: 0.5;
     background-color: #c5c5c5;
     border-radius: 50%;
+    transition: all .4s ease-in-out;
 }
 .slick-active .paging{
     width: 38px;

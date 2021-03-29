@@ -35,7 +35,8 @@ export default function SimpleSlider(props) {
         <div
           style={{
             backgroundColor: "#f7f7f7",
-            padding: "10px"
+            paddingTop: "10px",
+            paddingBottom: "10px"
           }}>
           <ul className="list-paging" style={{ margin: "0px" }}>{dots}</ul>
         </div>
