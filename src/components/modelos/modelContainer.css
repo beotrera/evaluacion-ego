@@ -73,7 +73,7 @@
     box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
     position: relative;
     background-color: white;
-    z-index: 2;
+    z-index: 1;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: none;
@@ -160,5 +160,14 @@
     }
     .filter-button-container-list{
         width: 150px;
+    }
+    .filter-button-container-list-item,.filter-button-container-list-item-left{
+        padding:0 7px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .modelContainer-title{
+        font-size: 35px;
     }
 }

@@ -4,13 +4,11 @@
 .title-container{
     display: flex;
     justify-content: center;
-    width: 80%;
-    margin: 0 auto;
 }
 .title-container-img{
     width: 40%;
     height: 320px;
-    text-align: left;
+    text-align: center;
 }
 .title-img{
     max-width: 100%;
@@ -18,7 +16,6 @@
 }
 .title-container-text{
     width: 40%;
-    margin-left: 7%;
 }
 
 .title-container-text h1{
@@ -52,6 +49,104 @@
     color: #373737;
 
 }
+.highlights-container{
+    width: 100%;
+}
+.highlights-containe-title{
+    display: flex;
+    justify-content: center;
+}
+.highlights-containe-title-text{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.highlights-containe-title-text h3,.highlights-containe-title-text p{
+        width: 70%;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        color: #373737;
+}
+.highlights-containe-title-text h3{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.4px;
+}
+.highlights-containe-title-text p{
+    line-height: 1.69;
+    letter-spacing: -0.1px;
+    font-size: 16px;
+}
+.highlights-containe-title-img{
+        width: 35%;
+        text-align: center;
+}
+.highlights-img{
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .highlights-containe-title-text,.highlights-containe-title-img{
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .title-container-text h1{
+        font-size: 40px;
+    }
+    .title-container-text{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .title-container-text h1{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .title-container{
+        flex-direction: column;
+    }
+    .title-container-text{
+        width: 86%;
+        margin: 0 auto;
+    }
+    .title-container-text h1{
+        width: 100%;
+        font-size: 35px;
+    }
+    .title-container-text h3{
+        width: 100%;
+    }
+    .title-container-img{
+        height: auto;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .highlights-containe-title{
+        flex-direction: column;
+        align-items: center;
+    }
+    .highlights-containe-title-img{
+        order: -1
+    }
+    .highlights-containe-title-text,.highlights-containe-title-img{
+        width: 90%;
+    }
+    .highlights-containe-title-text{
+        margin-top: 20px;
+    }
+    .highlights-containe-title-text h3, .highlights-containe-title-text p{
+        width: 90%;
+    }
+}
+
+
+/* footer ficha
 .highlights-container{
     width: 80%;
     margin: 0 auto;
@@ -99,42 +194,7 @@
 
 }
 
-@media only screen and (max-width: 1200px) {
-    .title-container-text h1{
-        font-size: 40px;
-    }
-    .title-container-text{
-        width: 50%;
-    }
-}
-@media only screen and (max-width: 1000px) {
-    .title-container-text h1{
-        font-size: 35px;
-    }
-    .highlights-container{
-        width: 90%;
-    }
-}
 @media only screen and (max-width: 950px) {
-    .title-container{
-        width: 90%;
-        flex-direction: column;
-    }
-    .title-container-text{
-        width: 94%;
-    }
-    .title-container-text h1{
-        width: 100%;
-        font-size: 35px;
-    }
-    .title-container-text h3{
-        width: 100%;
-    }
-    .title-container-img{
-        height: auto;
-        width: 100%;
-        margin-bottom: 30px;
-    }
     .highlights-containe-title{
         flex-direction: column;
         margin-bottom: 40px;
@@ -156,3 +216,10 @@
     }
 
 }
+
+@media only screen and (max-width: 1000px) {
+    .highlights-container{
+        width: 90%;
+    }
+}
+*/

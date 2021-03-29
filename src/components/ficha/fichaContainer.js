@@ -31,7 +31,7 @@ const FichaContainer=()=>{
                     <p>{Data.description}</p>
                 </div>
             </div>
-            <div style={{marginBottom:20,marginTop:20}}>
+            <div style={{marginBottom:60,marginTop:30}}>
                 <Slider item={Data}/>
             </div>
             <div className="highlights-container">
@@ -54,7 +54,7 @@ const FichaContainer=()=>{
                                 else
                                 {
                                     return(
-                                        <div className="highlights-containe-title">
+                                        <div className="highlights-containe-title" style={{marginTop:50}}>
                                             <div className="highlights-containe-title-img">
                                                 <img className="highlights-img" src={`https://challenge.agenciaego.tech${item.image}`}/>
                                             </div>

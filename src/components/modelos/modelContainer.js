@@ -8,7 +8,7 @@ import  SortArray from "sort-array"
 
 const ModelContainer = () =>{
    const [data,setData] = useState([]);
-   const [filter,setFilter] = useState("priceA");
+   const [filter,setFilter] = useState("id");
    const [isOpenOrder,setOpenOrder] = useState(false);
    const [isOpenFilter,setOpenFilter] = useState(false);
 
@@ -17,22 +17,22 @@ const ModelContainer = () =>{
 
    useEffect(()=>{
       new Promise ((res,rej)=>{
-         Data=GetData()
+         var datos=GetData()
          switch (filter){
             case "yearA":
-               Data=SortArray(Data,{by:"year",order:"asc"})
+               Data=SortArray(datos,{by:"year",order:"asc"})
                break
             case "yearD":
-               Data=SortArray(Data,{by:"price",order:"desc"})
+               Data=SortArray(datos,{by:"price",order:"desc"})
                break
             case "priceA":
-               Data=SortArray(Data,{by:"price",order:"asc"})
+               Data=SortArray(datos,{by:"price",order:"asc"})
                break
             case "priceD":
-               Data=SortArray(Data,{by:"price",order:"desc"})
+               Data=SortArray(datos,{by:"price",order:"desc"})
                break
             default:
-               Data=SortArray(Data,{by:"id",order:"asc"})
+               Data=SortArray(datos,{by:"id",order:"asc"})
             }
          Filter()
          res(Data)
@@ -44,7 +44,7 @@ const ModelContainer = () =>{
    }
    const Filter =()=>{
       if(id !== undefined){Data=Data.filter(x => x.segment === id)}
-      return 0
+      return Data
     }
 
     return(
@@ -89,7 +89,7 @@ const ModelContainer = () =>{
                </ul>
             </div>
             {/* ordenar por */}
-            <div className="filter-button-container" onMouseEnter={() => setOpenOrder(true)} onMouseLeave={() => setOpenFilter(false)}>
+            <div className="filter-button-container">
                <div>
                   <button className="filter-button right-text" onClick={e=>setOpenOrder(!isOpenOrder)}>
                      <span className="filter-container-text">Ordenar Por</span>
@@ -97,11 +97,11 @@ const ModelContainer = () =>{
                   </button>
                </div>
                <ul className={isOpenOrder?"filter-button-container-list isOpen":"filter-button-container-list"} >
-                  <li className="filter-button-container-list-item line-bottom" onClick={e=>setFilter("")}>Nada</li>
-                  <li className="filter-button-container-list-item line-bottom" onClick={e=>setFilter("priceA")}>De <strong>menor</strong> a <strong>mayor</strong> precio</li>
-                  <li className="filter-button-container-list-item line-bottom" onClick={e=>setFilter("priceD")}>De <strong>menor</strong> a <strong>mayor</strong> precio</li>
-                  <li className="filter-button-container-list-item line-bottom" onClick={e=>setFilter("yearD")}>Más <strong>nuevos</strong> primero</li>
-                  <li className="filter-button-container-list-item" onClick={e=>setFilter("yearA")}>Más <strong>viejos</strong> primero</li>
+                  <li className="filter-button-container-list-item line-bottom" onClick={e=>{setFilter("");setOpenOrder(false)}}>Nada</li>
+                  <li className="filter-button-container-list-item line-bottom" onClick={e=>{setFilter("priceA");setOpenOrder(false)}}>De <strong>menor</strong> a <strong>mayor</strong> precio</li>
+                  <li className="filter-button-container-list-item line-bottom" onClick={e=>{setFilter("priceD");setOpenOrder(false)}}>De <strong>mayor</strong> a <strong>menor</strong> precio</li>
+                  <li className="filter-button-container-list-item line-bottom" onClick={e=>{setFilter("yearD");setOpenOrder(false)}}>Más <strong>nuevos</strong> primero</li>
+                  <li className="filter-button-container-list-item" onClick={e=>{setFilter("yearA");setOpenOrder(false)}}>Más <strong>viejos</strong> primero</li>
                </ul>
             </div>
         </div>

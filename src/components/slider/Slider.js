@@ -52,14 +52,17 @@ export default function SimpleSlider(props) {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            initialSlide: 2
+            initialSlide: 2,
+            infinite: true,
           }
         },
         {
           breakpoint:700,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            infinite: true,
+            centerPadding: "60px"
           }
         }
       ]
@@ -72,9 +75,9 @@ export default function SimpleSlider(props) {
       {Data.model_features.map(x=>
         {
           return(
-            <div>
-                <img src={`https://challenge.agenciaego.tech${x.photo}`}/>
-                <div>
+            <div className="slider-item-container">
+                <img className="slide-img" src={`https://challenge.agenciaego.tech${x.photo}`}/>
+                <div className="slider-text-container">
                   <h3 >{x.name}</h3>
                   <p >{x.description}</p>
                 </div>
