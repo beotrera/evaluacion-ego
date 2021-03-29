@@ -53,7 +53,7 @@ const ModelContainer = () =>{
         <h2 className="modelContainer-title">Descubrí todos los modelos</h2>
         <div className="fiter-container">
            <div className="filter-container-segmente-open">
-               <span className="filter-container-text">Filtrar Por </span>
+               <span className="filter-container-text" style={{marginRight:20}}>Filtrar Por </span>
                <NavLink className="filter-button-open" exact to="/modelos" activeClassName="select">Todos</NavLink>
                <NavLink className="filter-button-open" to="/modelos/Autos" activeClassName="select">Autos</NavLink>
                <NavLink className="filter-button-open" to="/modelos/Pickups y Comerciales" activeClassName="select">Pickups y Comerciales</NavLink>
