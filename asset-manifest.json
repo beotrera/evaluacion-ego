@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/evaluacion-ego/static/css/main.fc81d24b.chunk.css",
-    "main.js": "/evaluacion-ego/static/js/main.d41ad912.chunk.js",
-    "main.js.map": "/evaluacion-ego/static/js/main.d41ad912.chunk.js.map",
+    "main.css": "/evaluacion-ego/static/css/main.d773812e.chunk.css",
+    "main.js": "/evaluacion-ego/static/js/main.3a35aa64.chunk.js",
+    "main.js.map": "/evaluacion-ego/static/js/main.3a35aa64.chunk.js.map",
     "runtime-main.js": "/evaluacion-ego/static/js/runtime-main.0f755116.js",
     "runtime-main.js.map": "/evaluacion-ego/static/js/runtime-main.0f755116.js.map",
     "static/css/2.d957b4b9.chunk.css": "/evaluacion-ego/static/css/2.d957b4b9.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.b2ce485c.chunk.js.map": "/evaluacion-ego/static/js/2.b2ce485c.chunk.js.map",
     "index.html": "/evaluacion-ego/index.html",
     "static/css/2.d957b4b9.chunk.css.map": "/evaluacion-ego/static/css/2.d957b4b9.chunk.css.map",
-    "static/css/main.fc81d24b.chunk.css.map": "/evaluacion-ego/static/css/main.fc81d24b.chunk.css.map",
+    "static/css/main.d773812e.chunk.css.map": "/evaluacion-ego/static/css/main.d773812e.chunk.css.map",
     "static/js/2.b2ce485c.chunk.js.LICENSE.txt": "/evaluacion-ego/static/js/2.b2ce485c.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/evaluacion-ego/static/media/slick.c94f7671.ttf"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.0f755116.js",
     "static/css/2.d957b4b9.chunk.css",
     "static/js/2.b2ce485c.chunk.js",
-    "static/css/main.fc81d24b.chunk.css",
-    "static/js/main.d41ad912.chunk.js"
+    "static/css/main.d773812e.chunk.css",
+    "static/js/main.3a35aa64.chunk.js"
   ]
 }
