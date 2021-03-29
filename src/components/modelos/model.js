@@ -12,7 +12,7 @@ const Model=({items})=>{
                 <h2 className="model-title">{items.name}</h2>
             </div>
             <div className="model-year-price-container">
-                <p className="model-year-price">{`${items.year} | $${items.price}`}</p>
+                <p className="model-year-price">{`${items.year} | $${new Intl.NumberFormat().format(items.price)}`}</p>
             </div>
             <img className="model-img" src={`https://challenge.agenciaego.tech${items.photo}`} alt="foto-model"></img>
             <div className="model-button-container">
