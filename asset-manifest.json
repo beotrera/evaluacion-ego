@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/evaluacion-ego/static/css/main.ce8d8ea4.chunk.css",
+    "main.css": "/evaluacion-ego/static/css/main.0f3436f5.chunk.css",
     "main.js": "/evaluacion-ego/static/js/main.22fc418c.chunk.js",
     "main.js.map": "/evaluacion-ego/static/js/main.22fc418c.chunk.js.map",
     "runtime-main.js": "/evaluacion-ego/static/js/runtime-main.0f755116.js",
@@ -10,7 +10,7 @@
     "static/js/2.0b8a6da6.chunk.js.map": "/evaluacion-ego/static/js/2.0b8a6da6.chunk.js.map",
     "index.html": "/evaluacion-ego/index.html",
     "static/css/2.d957b4b9.chunk.css.map": "/evaluacion-ego/static/css/2.d957b4b9.chunk.css.map",
-    "static/css/main.ce8d8ea4.chunk.css.map": "/evaluacion-ego/static/css/main.ce8d8ea4.chunk.css.map",
+    "static/css/main.0f3436f5.chunk.css.map": "/evaluacion-ego/static/css/main.0f3436f5.chunk.css.map",
     "static/js/2.0b8a6da6.chunk.js.LICENSE.txt": "/evaluacion-ego/static/js/2.0b8a6da6.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/evaluacion-ego/static/media/slick.c94f7671.ttf"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.0f755116.js",
     "static/css/2.d957b4b9.chunk.css",
     "static/js/2.0b8a6da6.chunk.js",
-    "static/css/main.ce8d8ea4.chunk.css",
+    "static/css/main.0f3436f5.chunk.css",
     "static/js/main.22fc418c.chunk.js"
   ]
 }
