@@ -1,7 +1,6 @@
 import ModelList from "./modelList"
 import "./modelContainer.css"
 import  arrow from "../../img/arrow@3x.png"
-import ItemsAPI from "./modelsItems"
 import React, { useState, useEffect } from 'react';
 import {useParams,NavLink,Link} from "react-router-dom";
 import  SortArray from "sort-array"
@@ -16,8 +15,12 @@ const ModelContainer = () =>{
    var Data=[]
 
    useEffect(()=>{
-      new Promise ((res,rej)=>{
-         var datos=GetData()
+      new Promise (async(res,rej)=>{
+         var datos=await fetch(`https://challenge.agenciaego.tech/models`)
+         .then(res => res.json())
+         .then(res=> res)
+         .catch(err=>console.log(err))
+
          switch (filter){
             case "yearA":
                Data=SortArray(datos,{by:"year",order:"asc"})
@@ -39,9 +42,7 @@ const ModelContainer = () =>{
        }).then(res => setData(res))
    },[id,filter])
 
-   const GetData =()=>{
-      return ItemsAPI
-   }
+
    const Filter =()=>{
       if(id !== undefined){Data=Data.filter(x => x.segment === id)}
       return Data

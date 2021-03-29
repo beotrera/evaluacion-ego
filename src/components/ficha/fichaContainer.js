@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from "react-router-dom";
 import Slider from "../slider/Slider"
-import ItemsAPI from "./fichaItem"
 import "./fichaContainer.css"
 
 
 const FichaContainer=()=>{
-    const [Data,setData] = useState({ model_highlights: [],model_features:[]})
+    const [Data,setData] = useState({ model_highlights: [],model_features:[],photo:""})
     const {id}=useParams();
     var direct=true
 
     useEffect(()=>{
-        new Promise ((res,rej)=>{
-           res(GetData())
+        new Promise (async(res,rej)=>{
+           var resultado=await fetch(`https://challenge.agenciaego.tech/models/${id}`)
+           .then(res => res.json())
+           .then(res=> res)
+           .catch(err=>console.log(err))
+           res(resultado)
          }).then(res => setData(res))
-     },[])
+     },[id,Data])
 
-     const GetData =()=>{
-        return ItemsAPI
-     }
     return(
         <div className="ficha-container">
             <div className="title-container">
                 <div className="title-container-img">
-                    <img className="title-img" src={`https://challenge.agenciaego.tech${Data.photo}`}/>
+                    <img className="title-img" alt="slide" src={`https://challenge.agenciaego.tech${Data.photo}`}/>
                 </div>
                 <div className="title-container-text">
                     <h3>{Data.name}</h3>
@@ -46,7 +46,7 @@ const FichaContainer=()=>{
                                                 <p>{item.content}</p>
                                             </div>
                                             <div className="highlights-containe-title-img">
-                                                <img className="highlights-img" src={`https://challenge.agenciaego.tech${item.image}`}/>
+                                                <img className="highlights-img" alt="slide" src={`https://challenge.agenciaego.tech${item.image}`}/>
                                             </div>
                                         </div>
                                         )
@@ -56,7 +56,7 @@ const FichaContainer=()=>{
                                     return(
                                         <div className="highlights-containe-title" style={{marginTop:50}}>
                                             <div className="highlights-containe-title-img">
-                                                <img className="highlights-img" src={`https://challenge.agenciaego.tech${item.image}`}/>
+                                                <img className="highlights-img" alt="slide" src={`https://challenge.agenciaego.tech${item.image}`}/>
                                             </div>
                                             <div className="highlights-containe-title-text img-right">
                                                 <h3>{item.title}</h3>
