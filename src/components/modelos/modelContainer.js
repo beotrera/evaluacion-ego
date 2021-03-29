@@ -26,7 +26,7 @@ const ModelContainer = () =>{
                Data=SortArray(datos,{by:"year",order:"asc"})
                break
             case "yearD":
-               Data=SortArray(datos,{by:"price",order:"desc"})
+               Data=SortArray(datos,{by:"year",order:"desc"})
                break
             case "priceA":
                Data=SortArray(datos,{by:"price",order:"asc"})
