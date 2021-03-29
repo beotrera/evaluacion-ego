@@ -21,6 +21,7 @@ function SamplePrevArrow(props) {
 
 export default function SimpleSlider(props) {
   const settings = {
+      dots:true,
       className: "center",
       centerMode: true,
       infinite: true,
@@ -30,6 +31,18 @@ export default function SimpleSlider(props) {
       speed: 500,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
+      appendDots: dots => (
+        <div
+          style={{
+            backgroundColor: "#f7f7f7",
+            padding: "10px"
+          }}>
+          <ul className="list-paging" style={{ margin: "0px" }}>{dots}</ul>
+        </div>
+      ),
+      customPaging: i => (
+        <p className="paging" id={i + 1}/>
+      ),
       responsive: [
         {
           breakpoint: 1500,

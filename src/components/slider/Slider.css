@@ -57,7 +57,29 @@
 .slider-text-container{
     width: 90% !important;
 }
-
+.list-paging{
+    display: flex;
+    justify-content: center;
+}
+.list-paging li{
+    width: 40px !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+.paging{
+    width: 8px;
+    height: 8px;
+    opacity: 0.5;
+    background-color: #c5c5c5;
+    border-radius: 50%;
+}
+.slick-active .paging{
+    width: 38px;
+    border-radius: 4px;
+    background-color: #4a4a4a;
+}
 @media only screen and (max-width: 750px) {
     .slick-arrow{
         display: none !important;
