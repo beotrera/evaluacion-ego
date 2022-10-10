@@ -3,7 +3,6 @@ import {useParams} from "react-router-dom";
 import Slider from "../slider/Slider"
 import "./fichaContainer.css"
 import apiData from '../../API_Toyota/FichaList'
-import Loading from "../Loading/Loading"
 
 
 const FichaContainer=()=>{
