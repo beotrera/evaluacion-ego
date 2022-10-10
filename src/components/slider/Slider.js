@@ -90,7 +90,7 @@ export default function SimpleSlider(props) {
         {
           return(
             <div className="slider-item-container">
-                <img className="slide-img" alt="slide" src={`https://challenge.agenciaego.tech${x.photo}`}/>
+                <img className="slide-img" alt="slide" src={`${process.env.PUBLIC_URL}${x.photo}`}/>
                 <div className="slider-text-container">
                   <h3 >{x.name}</h3>
                   <p >{x.description}</p>

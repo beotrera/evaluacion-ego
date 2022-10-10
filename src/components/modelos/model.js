@@ -14,7 +14,7 @@ const Model=({items})=>{
             <div className="model-year-price-container">
                 <p className="model-year-price">{`${items.year} | $${new Intl.NumberFormat().format(items.price)}`}</p>
             </div>
-            <img className="model-img" src={`https://challenge.agenciaego.tech${items.photo}`} alt="foto-model"></img>
+            <img className="model-img" src={`${process.env.PUBLIC_URL}${items.photo}`} alt="foto-model"></img>
             <div className="model-button-container">
                 <button className={isHover?"model-button isHoverB":"model-button"} onMouseEnter={() => setHoverB(true)} onMouseLeave={() => setHoverB(false)}>
                     <Link  className={isHoverB? "model-button-link link":"model-button-link"} to={`/ficha/${items.id}`}>Ver Modelo</Link>

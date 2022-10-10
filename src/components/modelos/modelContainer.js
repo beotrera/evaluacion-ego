@@ -4,22 +4,23 @@ import  arrow from "../../img/arrow@3x.png"
 import React, { useState, useEffect } from 'react';
 import {useParams,NavLink,Link} from "react-router-dom";
 import  SortArray from "sort-array"
+import Loading from "../Loading/Loading"
+import apiData from '../../API_Toyota/ModelList'
 
 const ModelContainer = () =>{
    const [data,setData] = useState([]);
    const [filter,setFilter] = useState("id");
    const [isOpenOrder,setOpenOrder] = useState(false);
    const [isOpenFilter,setOpenFilter] = useState(false);
+   const [isLoading,setisLoading] = useState(false);
 
    const {id} = useParams();
    var Data=[]
 
    useEffect(()=>{
+      setisLoading(false)
       new Promise (async(res,rej)=>{
-         var datos=await fetch(`https://challenge.agenciaego.tech/models`)
-         .then(res => res.json())
-         .then(res=> res)
-         .catch(err=>console.log(err))
+         var datos=apiData
 
          switch (filter){
             case "yearA":
@@ -49,7 +50,9 @@ const ModelContainer = () =>{
     }
 
     return(
-        <div className="modelContainer">
+   <div>
+         <Loading state={isLoading}/>
+        <div className="modelContainer" style={isLoading?{display:"none"}:{display:"block"}}>
         <h2 className="modelContainer-title">Descubrí todos los modelos</h2>
         <div className="fiter-container">
            <div className="filter-container-segmente-open">
@@ -109,6 +112,7 @@ const ModelContainer = () =>{
         <div className="line"></div>
         <ModelList items={data}/>
     </div>
+   </div>
     )
 };
 
